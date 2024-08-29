@@ -1,0 +1,13 @@
+{
+    "extends": ["config:base"],
+    "packageRules": [
+      {
+        "matchDatasources": ["docker"],
+        "matchPackageNames": ["ghcr.io/actions/actions-runner"],
+        "versioning": "semver",
+        "automerge": true,
+        "enabled": true,
+        "groupName": "actions-runner"
+      }
+    ]
+  }
