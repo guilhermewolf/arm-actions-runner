@@ -43,11 +43,11 @@ jobs:
           context: .
           push: true
           platforms: linux/amd64,linux/arm64
-          build-args:
-            RUNNER_VERSION: ${{ env.RUNNER_VERSION }}
+          build-args: |
+            RUNNER_VERSION=${{ env.RUNNER_VERSION }}
           tags: |
-            ghcr.io/guilhermewolf/atoca.house/custom-actions-runner:${{ env.RUNNER_VERSION }}
-            ghcr.io/guilhermewolf/atoca.house/custom-actions-runner:latest
+            ghcr.io/guilhermewolf/arm-actions-runner/arm-actions-runner:${{ env.RUNNER_VERSION }}
+            ghcr.io/guilhermewolf/arm-actions-runner/arm-actions-runner:latest
 
       - name: Log out from GitHub Container Registry
         run: docker logout ghcr.io
