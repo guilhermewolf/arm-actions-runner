@@ -7,9 +7,6 @@ USER root
 # Install unzip, Node.js, and any other necessary packages
 RUN apt-get update && \
     apt-get install -y unzip curl && \
-    curl -fsSL https://deb.nodesource.com/setup_16.x | bash - && \
-    apt-get install -y nodejs && \
-    ln -s /usr/bin/node /usr/local/bin/node && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
