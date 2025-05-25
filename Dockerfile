@@ -1,4 +1,4 @@
-ARG RUNNER_VERSION=2.322.0
+ARG RUNNER_VERSION=2.324.0
 FROM ghcr.io/actions/actions-runner:${RUNNER_VERSION}
 
 # Switch to root user to install packages
